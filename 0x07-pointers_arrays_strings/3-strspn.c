@@ -1,20 +1,33 @@
 #include "main.h"
 /**
- * _memcpy - copies memory area
- * @dest: the memory area
- * @src: constant byte
- * @n: bytes from memory area
+ * _strspn - gets the length of a prefix substring
+ * @s: pointer to a string
+ * @accept: pointer to a string
  *
- * Return: a pointer to dest
+ * Return: the number of bytes
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+unsigned int _strspn(char *s, char *accept)
 {
-unsigned int i = 0;
+int count = 0;
+int i = 0;
+int j = 0;
 
-while (i < n)
+while (s[i] != '\0')
 {
-dest[i] = src[i];
-i++;
+while (accept[j] != '\0')
+{
+if (accept[j] == s[i])
+{
+count++;
 }
-return (dest);
+j++;
+}
+j = 0;
+i++;
+if (s[i] == ' ')
+{
+break;
+}
+}
+return (count);
 }
