@@ -8,7 +8,6 @@
 
 int _strlen_recursion(char *s)
 {
-	int cou = sizeof(*s);
 
 	if (*s == '\0')
 	{
@@ -16,8 +15,7 @@ int _strlen_recursion(char *s)
 	}
 	else
 	{
-		_putchar(cou);
 		s++;
-		_strlen_recursion(s);
+		return (_strlen_recursion(s) + 1);
 	}
 }
