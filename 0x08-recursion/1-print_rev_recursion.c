@@ -6,7 +6,7 @@
  * Return: Nothing.
  */
 
-void print_rev_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
 	if (*s == '\0')
 	{
@@ -15,7 +15,7 @@ void print_rev_recursion(char *s)
 	else
 	{
 		s++;
-		print_rev_recursion(s);
+		_print_rev_recursion(s);
 		s--;
 		_putchar(*s);
 	}
