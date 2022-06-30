@@ -12,8 +12,8 @@ void *y;
 
 y = malloc(b);
 
-if (s == NULL)
+if (y == NULL)
 exit(98);
 
-return (s);
+return (y);
 }
