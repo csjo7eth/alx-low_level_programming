@@ -4,11 +4,11 @@
 /**
  * add_nodeint - function to add node from top
  *
- * @heas: listint_t typr of node struct pointer to head
+ * @head: listint_t type of node struct pointer to head
  *
- * @n: constant int type
+ * @n: const int type
  *
- * Return: Always seccessful
+ * Return: Always successful
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
