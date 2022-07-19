@@ -2,22 +2,21 @@
 #include "lists.h"
 
 /**
- * ptint_listint - function to print all elements
- * @h: pointer to the list.
- * Return: number of node.
+ * print_listint - function to print all elements
+ * @h: listint_t type of node struct
+ * Return: Always successful
  */
 size_t print_listint(const listint_t *h)
 {
-	const listint_t *linode = h;
-	size_t incr = 0;
+	int i;
 
+	i = 0;
 
-	while (linode)
+	while (h != NULL)
 	{
-		printf("%i\n", linode->n);
-		incr++;
-		linode = linode->next;
+		printf("%d\n", h->n);
+		h = h->next;
+		i++;
 	}
-
-	return (incr);
+	return (i);
 }
