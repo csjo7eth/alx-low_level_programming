@@ -3,21 +3,21 @@
 
 /**
  * ptint_listint - function to print all elements
- * @h: listint_t type of node struct
- *
- * Return: Always successful
+ * @h: pointer to the list.
+ * Return: number of node.
  */
 size_t print_listint(const listint_t *h)
 {
-	int i;
+	const listint_t *linode = h;
+	size_t incr = 0;
 
-	i == 0;
 
-	while (h != NULL)
+	while (linode)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
-		i++;
+		printf("%i\n", linode->n);
+		incr++;
+		linode = linode->next;
 	}
-	return (i);
+
+	return (incr);
 }
